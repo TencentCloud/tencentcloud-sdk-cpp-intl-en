@@ -1,0 +1,369 @@
+/*
+ * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_AS_V20180419_MODEL_INSTANCE_H_
+#define TENCENTCLOUD_AS_V20180419_MODEL_INSTANCE_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace As
+    {
+        namespace V20180419
+        {
+            namespace Model
+            {
+                /**
+                * Instance information
+                */
+                class Instance : public AbstractModel
+                {
+                public:
+                    Instance();
+                    ~Instance() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取Instance ID
+                     * @return InstanceId Instance ID
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Instance ID
+                     * @param InstanceId Instance ID
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Auto scaling group ID
+                     * @return AutoScalingGroupId Auto scaling group ID
+                     */
+                    std::string GetAutoScalingGroupId() const;
+
+                    /**
+                     * 设置Auto scaling group ID
+                     * @param AutoScalingGroupId Auto scaling group ID
+                     */
+                    void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
+
+                    /**
+                     * 判断参数 AutoScalingGroupId 是否已赋值
+                     * @return AutoScalingGroupId 是否已赋值
+                     */
+                    bool AutoScalingGroupIdHasBeenSet() const;
+
+                    /**
+                     * 获取Launch configuration ID
+                     * @return LaunchConfigurationId Launch configuration ID
+                     */
+                    std::string GetLaunchConfigurationId() const;
+
+                    /**
+                     * 设置Launch configuration ID
+                     * @param LaunchConfigurationId Launch configuration ID
+                     */
+                    void SetLaunchConfigurationId(const std::string& _launchConfigurationId);
+
+                    /**
+                     * 判断参数 LaunchConfigurationId 是否已赋值
+                     * @return LaunchConfigurationId 是否已赋值
+                     */
+                    bool LaunchConfigurationIdHasBeenSet() const;
+
+                    /**
+                     * 获取Launch configuration name
+                     * @return LaunchConfigurationName Launch configuration name
+                     */
+                    std::string GetLaunchConfigurationName() const;
+
+                    /**
+                     * 设置Launch configuration name
+                     * @param LaunchConfigurationName Launch configuration name
+                     */
+                    void SetLaunchConfigurationName(const std::string& _launchConfigurationName);
+
+                    /**
+                     * 判断参数 LaunchConfigurationName 是否已赋值
+                     * @return LaunchConfigurationName 是否已赋值
+                     */
+                    bool LaunchConfigurationNameHasBeenSet() const;
+
+                    /**
+                     * 获取Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
+                     * @return LifeCycleState Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
+                     */
+                    std::string GetLifeCycleState() const;
+
+                    /**
+                     * 设置Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
+                     * @param LifeCycleState Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
+                     */
+                    void SetLifeCycleState(const std::string& _lifeCycleState);
+
+                    /**
+                     * 判断参数 LifeCycleState 是否已赋值
+                     * @return LifeCycleState 是否已赋值
+                     */
+                    bool LifeCycleStateHasBeenSet() const;
+
+                    /**
+                     * 获取Health status. Value range: HEALTHY, UNHEALTHY
+                     * @return HealthStatus Health status. Value range: HEALTHY, UNHEALTHY
+                     */
+                    std::string GetHealthStatus() const;
+
+                    /**
+                     * 设置Health status. Value range: HEALTHY, UNHEALTHY
+                     * @param HealthStatus Health status. Value range: HEALTHY, UNHEALTHY
+                     */
+                    void SetHealthStatus(const std::string& _healthStatus);
+
+                    /**
+                     * 判断参数 HealthStatus 是否已赋值
+                     * @return HealthStatus 是否已赋值
+                     */
+                    bool HealthStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to add scale-in protection
+                     * @return ProtectedFromScaleIn Whether to add scale-in protection
+                     */
+                    bool GetProtectedFromScaleIn() const;
+
+                    /**
+                     * 设置Whether to add scale-in protection
+                     * @param ProtectedFromScaleIn Whether to add scale-in protection
+                     */
+                    void SetProtectedFromScaleIn(const bool& _protectedFromScaleIn);
+
+                    /**
+                     * 判断参数 ProtectedFromScaleIn 是否已赋值
+                     * @return ProtectedFromScaleIn 是否已赋值
+                     */
+                    bool ProtectedFromScaleInHasBeenSet() const;
+
+                    /**
+                     * 获取Availability zone
+                     * @return Zone Availability zone
+                     */
+                    std::string GetZone() const;
+
+                    /**
+                     * 设置Availability zone
+                     * @param Zone Availability zone
+                     */
+                    void SetZone(const std::string& _zone);
+
+                    /**
+                     * 判断参数 Zone 是否已赋值
+                     * @return Zone 是否已赋值
+                     */
+                    bool ZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Creation type. Value range: AUTO_CREATION, MANUAL_ATTACHING.
+                     * @return CreationType Creation type. Value range: AUTO_CREATION, MANUAL_ATTACHING.
+                     */
+                    std::string GetCreationType() const;
+
+                    /**
+                     * 设置Creation type. Value range: AUTO_CREATION, MANUAL_ATTACHING.
+                     * @param CreationType Creation type. Value range: AUTO_CREATION, MANUAL_ATTACHING.
+                     */
+                    void SetCreationType(const std::string& _creationType);
+
+                    /**
+                     * 判断参数 CreationType 是否已赋值
+                     * @return CreationType 是否已赋值
+                     */
+                    bool CreationTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Instance addition time
+                     * @return AddTime Instance addition time
+                     */
+                    std::string GetAddTime() const;
+
+                    /**
+                     * 设置Instance addition time
+                     * @param AddTime Instance addition time
+                     */
+                    void SetAddTime(const std::string& _addTime);
+
+                    /**
+                     * 判断参数 AddTime 是否已赋值
+                     * @return AddTime 是否已赋值
+                     */
+                    bool AddTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Instance type
+                     * @return InstanceType Instance type
+                     */
+                    std::string GetInstanceType() const;
+
+                    /**
+                     * 设置Instance type
+                     * @param InstanceType Instance type
+                     */
+                    void SetInstanceType(const std::string& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     */
+                    bool InstanceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Version number
+                     * @return VersionNumber Version number
+                     */
+                    int64_t GetVersionNumber() const;
+
+                    /**
+                     * 设置Version number
+                     * @param VersionNumber Version number
+                     */
+                    void SetVersionNumber(const int64_t& _versionNumber);
+
+                    /**
+                     * 判断参数 VersionNumber 是否已赋值
+                     * @return VersionNumber 是否已赋值
+                     */
+                    bool VersionNumberHasBeenSet() const;
+
+                    /**
+                     * 获取Auto scaling group name
+                     * @return AutoScalingGroupName Auto scaling group name
+                     */
+                    std::string GetAutoScalingGroupName() const;
+
+                    /**
+                     * 设置Auto scaling group name
+                     * @param AutoScalingGroupName Auto scaling group name
+                     */
+                    void SetAutoScalingGroupName(const std::string& _autoScalingGroupName);
+
+                    /**
+                     * 判断参数 AutoScalingGroupName 是否已赋值
+                     * @return AutoScalingGroupName 是否已赋值
+                     */
+                    bool AutoScalingGroupNameHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Instance ID
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Auto scaling group ID
+                     */
+                    std::string m_autoScalingGroupId;
+                    bool m_autoScalingGroupIdHasBeenSet;
+
+                    /**
+                     * Launch configuration ID
+                     */
+                    std::string m_launchConfigurationId;
+                    bool m_launchConfigurationIdHasBeenSet;
+
+                    /**
+                     * Launch configuration name
+                     */
+                    std::string m_launchConfigurationName;
+                    bool m_launchConfigurationNameHasBeenSet;
+
+                    /**
+                     * Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
+                     */
+                    std::string m_lifeCycleState;
+                    bool m_lifeCycleStateHasBeenSet;
+
+                    /**
+                     * Health status. Value range: HEALTHY, UNHEALTHY
+                     */
+                    std::string m_healthStatus;
+                    bool m_healthStatusHasBeenSet;
+
+                    /**
+                     * Whether to add scale-in protection
+                     */
+                    bool m_protectedFromScaleIn;
+                    bool m_protectedFromScaleInHasBeenSet;
+
+                    /**
+                     * Availability zone
+                     */
+                    std::string m_zone;
+                    bool m_zoneHasBeenSet;
+
+                    /**
+                     * Creation type. Value range: AUTO_CREATION, MANUAL_ATTACHING.
+                     */
+                    std::string m_creationType;
+                    bool m_creationTypeHasBeenSet;
+
+                    /**
+                     * Instance addition time
+                     */
+                    std::string m_addTime;
+                    bool m_addTimeHasBeenSet;
+
+                    /**
+                     * Instance type
+                     */
+                    std::string m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * Version number
+                     */
+                    int64_t m_versionNumber;
+                    bool m_versionNumberHasBeenSet;
+
+                    /**
+                     * Auto scaling group name
+                     */
+                    std::string m_autoScalingGroupName;
+                    bool m_autoScalingGroupNameHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_AS_V20180419_MODEL_INSTANCE_H_

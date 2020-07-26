@@ -1,0 +1,101 @@
+/*
+ * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_VPC_V20170312_MODEL_CREATEADDRESSTEMPLATEREQUEST_H_
+#define TENCENTCLOUD_VPC_V20170312_MODEL_CREATEADDRESSTEMPLATEREQUEST_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Vpc
+    {
+        namespace V20170312
+        {
+            namespace Model
+            {
+                /**
+                * CreateAddressTemplate request structure.
+                */
+                class CreateAddressTemplateRequest : public AbstractModel
+                {
+                public:
+                    CreateAddressTemplateRequest();
+                    ~CreateAddressTemplateRequest() = default;
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取The name of the IP address template
+                     * @return AddressTemplateName The name of the IP address template
+                     */
+                    std::string GetAddressTemplateName() const;
+
+                    /**
+                     * 设置The name of the IP address template
+                     * @param AddressTemplateName The name of the IP address template
+                     */
+                    void SetAddressTemplateName(const std::string& _addressTemplateName);
+
+                    /**
+                     * 判断参数 AddressTemplateName 是否已赋值
+                     * @return AddressTemplateName 是否已赋值
+                     */
+                    bool AddressTemplateNameHasBeenSet() const;
+
+                    /**
+                     * 获取Address information, including IP, CIDR and IP address range.
+                     * @return Addresses Address information, including IP, CIDR and IP address range.
+                     */
+                    std::vector<std::string> GetAddresses() const;
+
+                    /**
+                     * 设置Address information, including IP, CIDR and IP address range.
+                     * @param Addresses Address information, including IP, CIDR and IP address range.
+                     */
+                    void SetAddresses(const std::vector<std::string>& _addresses);
+
+                    /**
+                     * 判断参数 Addresses 是否已赋值
+                     * @return Addresses 是否已赋值
+                     */
+                    bool AddressesHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * The name of the IP address template
+                     */
+                    std::string m_addressTemplateName;
+                    bool m_addressTemplateNameHasBeenSet;
+
+                    /**
+                     * Address information, including IP, CIDR and IP address range.
+                     */
+                    std::vector<std::string> m_addresses;
+                    bool m_addressesHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_VPC_V20170312_MODEL_CREATEADDRESSTEMPLATEREQUEST_H_

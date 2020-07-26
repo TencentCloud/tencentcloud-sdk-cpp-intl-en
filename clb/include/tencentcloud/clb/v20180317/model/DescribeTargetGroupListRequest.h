@@ -1,0 +1,150 @@
+/*
+ * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_CLB_V20180317_MODEL_DESCRIBETARGETGROUPLISTREQUEST_H_
+#define TENCENTCLOUD_CLB_V20180317_MODEL_DESCRIBETARGETGROUPLISTREQUEST_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/clb/v20180317/model/Filter.h>
+
+
+namespace TencentCloud
+{
+    namespace Clb
+    {
+        namespace V20180317
+        {
+            namespace Model
+            {
+                /**
+                * DescribeTargetGroupList request structure.
+                */
+                class DescribeTargetGroupListRequest : public AbstractModel
+                {
+                public:
+                    DescribeTargetGroupListRequest();
+                    ~DescribeTargetGroupListRequest() = default;
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取Target group ID array
+                     * @return TargetGroupIds Target group ID array
+                     */
+                    std::vector<std::string> GetTargetGroupIds() const;
+
+                    /**
+                     * 设置Target group ID array
+                     * @param TargetGroupIds Target group ID array
+                     */
+                    void SetTargetGroupIds(const std::vector<std::string>& _targetGroupIds);
+
+                    /**
+                     * 判断参数 TargetGroupIds 是否已赋值
+                     * @return TargetGroupIds 是否已赋值
+                     */
+                    bool TargetGroupIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName. Target group ID will be used first.
+                     * @return Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName. Target group ID will be used first.
+                     */
+                    std::vector<Filter> GetFilters() const;
+
+                    /**
+                     * 设置Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName. Target group ID will be used first.
+                     * @param Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName. Target group ID will be used first.
+                     */
+                    void SetFilters(const std::vector<Filter>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     */
+                    bool FiltersHasBeenSet() const;
+
+                    /**
+                     * 获取Starting display offset
+                     * @return Offset Starting display offset
+                     */
+                    uint64_t GetOffset() const;
+
+                    /**
+                     * 设置Starting display offset
+                     * @param Offset Starting display offset
+                     */
+                    void SetOffset(const uint64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
+                     * 获取Limit of the number of displayed results. Default value: 20
+                     * @return Limit Limit of the number of displayed results. Default value: 20
+                     */
+                    uint64_t GetLimit() const;
+
+                    /**
+                     * 设置Limit of the number of displayed results. Default value: 20
+                     * @param Limit Limit of the number of displayed results. Default value: 20
+                     */
+                    void SetLimit(const uint64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     */
+                    bool LimitHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Target group ID array
+                     */
+                    std::vector<std::string> m_targetGroupIds;
+                    bool m_targetGroupIdsHasBeenSet;
+
+                    /**
+                     * Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName. Target group ID will be used first.
+                     */
+                    std::vector<Filter> m_filters;
+                    bool m_filtersHasBeenSet;
+
+                    /**
+                     * Starting display offset
+                     */
+                    uint64_t m_offset;
+                    bool m_offsetHasBeenSet;
+
+                    /**
+                     * Limit of the number of displayed results. Default value: 20
+                     */
+                    uint64_t m_limit;
+                    bool m_limitHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_CLB_V20180317_MODEL_DESCRIBETARGETGROUPLISTREQUEST_H_
